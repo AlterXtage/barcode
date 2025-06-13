@@ -1,20 +1,17 @@
-# Imagen oficial de Node.js
-FROM node:20
+FROM node:20-slim
 
-# Directorio de trabajo dentro del contenedor
+# Crear directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar archivos de dependencias
+# Copiar los archivos necesarios
 COPY package*.json ./
-
-# Instalar dependencias
 RUN npm install
 
-# Copiar el resto del código de la aplicación
+# Copiar el resto del código
 COPY . .
 
-# Exponer el puerto del servidor (ajusta si tu app usa otro)
+# Exponer el puerto que usa la app (ajusta si usas otro)
 EXPOSE 3000
 
-# Comando de inicio
+# Comando para iniciar la app
 CMD ["node", "app.js"]

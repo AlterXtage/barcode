@@ -3,6 +3,10 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mysql2": "^3.14.1",
-    "start": "node app.js"
+  "scripts": {
+  "start": "node app.js"
+}
+  
   }
+  
 }
